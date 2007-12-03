@@ -14,14 +14,14 @@
   <table width="100%">
     <tr>
       <td style="padding-right:10px; width:250px" valign="top">
-        <gm:list id="myList" data="http://pipes.yahoo.com/pipes/pipe.run?_id=5eda95fccb04b4f95b5c6dc9490654b0&_render=rss"
+        <gm:list id="myList" data="http://tinyurl.com/3cta6p"
             pagesize="10" template="myListTemplate">
           <gm:handleEvent event="select" src="myMap"/>
         </gm:list>
       </td>
       <td valign="top">
         <gm:map id="myMap" style="border:solid black 1px" control="large"
-            maptypes="true" data="${myList}" geolocationref="atom:title"
+            maptypes="true" data="${myList}"
             infotemplate="myMapDetailsTemplate"
             lat="30.53" lng="-89.68" zoom="9">
           <gm:handleEvent event="select" src="myList"/>
@@ -46,7 +46,7 @@
   <gm:template id="myMapDetailsTemplate">
     <div repeat="true">
       <b><gm:text ref="atom:title"/></b><br/>
-      Lat: <gm:text ref="geo:long"/><br/>
+      Lat: <gm:text ref="geo:lat"/><br/>
       Long: <gm:text ref="geo:long"/>
     </div>
   </gm:template>
